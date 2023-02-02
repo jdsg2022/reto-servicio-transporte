@@ -16,8 +16,14 @@ public class ServicioTransportes {
     public ServicioTransportes(int cantidadViajes) {
         this.nombre = "Transportes Medellín";
         this.cantidadViajes = cantidadViajes;
-        viajes = new ArrayList<>(List.of());
-        buses = new ArrayList<>(List.of());
+
+        viajes = new ArrayList<>(List.of(new Viaje("Bucaramanga", 12),
+                new Viaje("Bogotá", 25),
+                new Viaje("Cúcuta", 20)));
+
+        buses = new ArrayList<>(List.of(new Bus(1,30),
+                new Bus(2,30),
+                new Bus(3, 30)));
     }
     public void agregarViaje(){
 

@@ -4,9 +4,6 @@ public class Bus {
     private int numeroBus;
     private int capacidadPasajeros;
 
-    public Bus() {
-    }
-
     public Bus(int numeroBus, int capacidadPasajeros) {
         this.numeroBus = numeroBus;
         this.capacidadPasajeros = capacidadPasajeros;

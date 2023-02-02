@@ -1,14 +1,11 @@
 package com.example.demo.models;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Viaje {
+    private LocalTime horario;
     private String destino;
     private int cantidadPasajeros;
-    List<Bus> buses;
 
     public Viaje(String destino, int cantidadPasajeros) {
         this.destino = destino;
