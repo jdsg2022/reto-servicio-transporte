@@ -25,27 +25,11 @@ public class ServicioTransportes {
                 new Bus(2,30),
                 new Bus(3, 30)));
     }
-    public void agregarViaje(){
-
+    public void agregarViaje(Viaje viaje){
+        viajes.add(viaje);
     }
     public List<Viaje> getViajes() {
         return viajes;
-    }
-
-    public void setViajes(List<Viaje> viajes) {
-        this.viajes = viajes;
-    }
-
-    public int getCantidadViajes() {
-        return cantidadViajes;
-    }
-
-    public void setCantidadViajes(int cantidadViajes) {
-        this.cantidadViajes = cantidadViajes;
-    }
-
-    public String getNombre() {
-        return nombre;
     }
 
     public List<Bus> getBuses() {
