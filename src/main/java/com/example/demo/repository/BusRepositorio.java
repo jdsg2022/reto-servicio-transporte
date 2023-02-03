@@ -11,7 +11,9 @@ public class BusRepositorio {
 
     public BusRepositorio() {
 
-        buses = new ArrayList<>();
+        buses = new ArrayList<>(List.of(new Bus(1,"AJD 143", 30),
+                new Bus(2,"KDH 396", 15),
+                new Bus(3,"CMG 963", 20)));
     }
 
     public void agregarBuses(Bus bus) {

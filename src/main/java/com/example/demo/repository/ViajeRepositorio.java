@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 import com.example.demo.models.Bus;
+import com.example.demo.models.Pasajero;
 import com.example.demo.models.Viaje;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +17,9 @@ public class ViajeRepositorio {
         viajes = new ArrayList<>(List.of(
                 new Viaje(1,
                         LocalDate.of(2023,2,15),
-                        LocalTime.of(12,15))));
+                        LocalTime.of(12,15),
+                        new ArrayList<Pasajero>(List.of(
+                                new Pasajero(1,"Carlos Mendez", 101014038))))));
     }
     public void agregarViaje(Viaje viaje){
         viajes.add(viaje);

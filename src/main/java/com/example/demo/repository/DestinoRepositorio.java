@@ -10,7 +10,9 @@ public class DestinoRepositorio {
     private List<Destino> destinos;
     public DestinoRepositorio (){
 
-        destinos = new ArrayList<>();
+        destinos = new ArrayList<>(List.of(new Destino(1,"Cartagena"),
+                new Destino(2,"Bucaramanga"),
+                new Destino(3,"Amazonas")));
     }
     public void agregarDestino(Destino destino){
         destinos.add(destino);

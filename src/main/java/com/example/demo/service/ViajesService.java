@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import com.example.demo.models.Bus;
+import com.example.demo.models.Destino;
 import com.example.demo.models.Viaje;
 import com.example.demo.repository.ViajeRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +22,28 @@ public class ViajesService implements IViajesService {
         Viaje viajes = new Viaje(
                 viaje.getIdViaje(),
                 viaje.getFecha(),
-                viaje.getHorario());
+                viaje.getHorario(),
+        viaje.getPasajeros());
         return viajes;
+    }
+
+    @Override
+    public List<Bus> obtenerBuses() {
+        return null;
+    }
+
+    @Override
+    public List<Destino> obtenerDestinos() {
+        return null;
+    }
+
+    @Override
+    public Bus agregarBus(Bus bus) {
+        return null;
+    }
+
+    @Override
+    public Destino agregarDestino(Destino destino) {
+        return null;
     }
 }
