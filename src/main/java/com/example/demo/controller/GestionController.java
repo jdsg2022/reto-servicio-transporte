@@ -18,11 +18,11 @@ public class GestionController {
     @Autowired
     private IGestionViajes iGestionViajes;
 
-    @GetMapping()
+    @GetMapping("/bring")
     public ResponseEntity obtenerTickets(){
         return new ResponseEntity(iGestionViajes.obtenerTickets(), HttpStatus.FOUND);
     }
-    @PostMapping()
+    @PostMapping("/add")
     public ResponseEntity registrarViaje(@RequestBody List<Viaje> viajes,
                                          List<Bus> buses,
                                          List<Destino> destinos){
