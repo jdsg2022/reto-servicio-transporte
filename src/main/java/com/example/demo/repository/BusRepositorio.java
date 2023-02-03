@@ -5,15 +5,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Repository
 public class BusRepositorio {
     private List<Bus> buses;
 
     public BusRepositorio() {
 
-        buses = new ArrayList<>(List.of(new Bus(1,"AJD 143", 30),
-                new Bus(2,"KDH 396", 15),
-                new Bus(3,"CMG 963", 20)));
+        buses = new ArrayList<>(List.of(new Bus("11","CHEVROLET", 30),
+                new Bus("12","MERCEDEZ", 15),
+                new Bus("13","KIA", 20)));
     }
 
     public void agregarBuses(Bus bus) {
@@ -22,6 +24,15 @@ public class BusRepositorio {
 
     public List<Bus> getBuses() {
         return buses;
+    }
+    public void busesDisponibles(String id){
+        List<Bus> disponibles = buses.stream().map(bus ->{
+            if (bus.getIdBus().equals(id)){
+                bus.busesDisponibles();
+                return bus;
+            }
+            return bus;
+        }).collect(Collectors.toList());
     }
 
     @Override

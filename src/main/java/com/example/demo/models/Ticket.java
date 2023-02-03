@@ -17,4 +17,44 @@ public class Ticket {
         this.listaBuses = new ArrayList<>();
         this.listaDestinos = new ArrayList<>();
     }
+
+    public String getNumeroTicket() {
+        return numeroTicket;
+    }
+
+    public void setNumeroTicket(String numeroTicket) {
+        this.numeroTicket = numeroTicket;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public List<Viaje> getListaViajes() {
+        return listaViajes;
+    }
+
+    public void setListaViajes(List<Viaje> listaViajes) {
+        this.listaViajes = listaViajes;
+    }
+
+    public List<Bus> getListaBuses() {
+        return listaBuses;
+    }
+
+    public void setListaBuses(List<Bus> listaBuses) {
+        this.listaBuses = listaBuses;
+    }
+
+    public List<Destino> getListaDestinos() {
+        return listaDestinos;
+    }
+
+    public void setListaDestinos(List<Destino> listaDestinos) {
+        this.listaDestinos = listaDestinos;
+    }
 }

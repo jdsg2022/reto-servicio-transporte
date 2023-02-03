@@ -1,37 +1,40 @@
 package com.example.demo.models;
 
 public class Bus {
-    private int idBus;
-    private String placa;
-    private int capacidadPasajeros;
+    private String idBus;
+    private String marca;
+    private int cantidadBuses;
 
-    public Bus(int idBus, String placa,int capacidadPasajeros) {
+    public Bus(String idBus, String marca, int cantidadBuses) {
         this.idBus = idBus;
-        this.placa = placa;
-        this.capacidadPasajeros = capacidadPasajeros;
+        this.marca = marca;
+        this.cantidadBuses = cantidadBuses;
+    }
+    public void busesDisponibles(){
+        this.cantidadBuses --;
     }
 
-    public int getIdBus() {
+    public String getIdBus() {
         return idBus;
     }
 
-    public void setIdBus(int idBus) {
+    public void setIdBus(String idBus) {
         this.idBus = idBus;
     }
 
-    public String getPlaca() {
-        return placa;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public int getCapacidadPasajeros() {
-        return capacidadPasajeros;
+    public int getCantidadBuses() {
+        return cantidadBuses;
     }
 
-    public void setCapacidadPasajeros(int capacidadPasajeros) {
-        this.capacidadPasajeros = capacidadPasajeros;
+    public void setCantidadBuses(int cantidadBuses) {
+        this.cantidadBuses = cantidadBuses;
     }
 }
