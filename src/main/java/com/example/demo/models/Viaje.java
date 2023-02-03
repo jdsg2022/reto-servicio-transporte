@@ -1,38 +1,40 @@
 package com.example.demo.models;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Viaje {
+    private int idViaje;
+    private LocalDate fecha;
     private LocalTime horario;
-    private String destino;
-    private int cantidadPasajeros;
 
-    public Viaje(String destino, int cantidadPasajeros) {
-        this.destino = destino;
-        this.cantidadPasajeros = cantidadPasajeros;
+    public Viaje(int idViaje, LocalDate fecha, LocalTime horario) {
+        this.idViaje = idViaje;
+        this.fecha = fecha;
+        this.horario = horario;
     }
 
-    public String getDestino() {
-        return destino;
+    public int getIdViaje() {
+        return idViaje;
     }
 
-    public void setDestino(String destino) {
-        this.destino = destino;
+    public void setIdViaje(int idViaje) {
+        this.idViaje = idViaje;
     }
 
-    public int getCantidadPasajeros() {
-        return cantidadPasajeros;
+    public LocalDate getFecha() {
+        return fecha;
     }
 
-    public void setCantidadPasajeros(int cantidadPasajeros) {
-        this.cantidadPasajeros = cantidadPasajeros;
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
-    @Override
-    public String toString() {
-        return "Viaje{" +
-                "destino='" + destino + '\'' +
-                ", cantidadPasajeros=" + cantidadPasajeros +
-                '}';
+    public LocalTime getHorario() {
+        return horario;
+    }
+
+    public void setHorario(LocalTime horario) {
+        this.horario = horario;
     }
 }
